@@ -1,99 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hunt Escape</title>
-  <!-- Google Fonts for a scary/creepy vibe -->
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt Escape</title>
+    <!-- Google Fonts for a scary/creepy vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background-color: #000000; /* solid black background */
-      color: #ff4c4c;
-      font-family: 'Roboto', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      overflow: hidden;
-      position: relative;
-    }
+        body {
+            background: linear-gradient(to bottom, #000000, #1a1a1a);
+            color: #ff4c4c;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    h1 {
-      font-family: 'Creepster', cursive;
-      font-size: 4rem;
-      text-shadow: 2px 2px 10px #ff0000, 0 0 20px #ff0000;
-      margin-bottom: 20px;
-      animation: flicker 2s infinite;
-      z-index: 1;
-      position: relative;
-    }
+        h1 {
+            font-family: 'Creepster', cursive;
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px #ff0000, 0 0 20px #ff0000;
+            margin-bottom: 20px;
+            animation: flicker 2s infinite;
+        }
 
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-      20%, 22%, 24%, 55% { opacity: 0.4; }
-    }
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 22%, 24%, 55% {
+                opacity: 0.4;
+            }
+        }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      max-width: 600px;
-      z-index: 1;
-      position: relative;
-    }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
 
-    a.play-store {
-      text-decoration: none;
-      color: #ffffff;
-      background-color: #ff0000;
-      padding: 15px 30px;
-      border-radius: 10px;
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
-      z-index: 1;
-      position: relative;
-    }
+        a.play-store {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ff0000;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+        }
 
-    a.play-store:hover {
-      background-color: #ff4c4c;
-      box-shadow: 0 0 20px #ff4c4c, 0 0 40px #ff4c4c;
-      transform: scale(1.05);
-    }
+        a.play-store:hover {
+            background-color: #ff4c4c;
+            box-shadow: 0 0 20px #ff4c4c, 0 0 40px #ff4c4c;
+            transform: scale(1.05);
+        }
 
-    /* Dark fog overlay */
-    body::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(50,50,50,0.15) 0%, rgba(0,0,0,0.9) 70%);
-      pointer-events: none;
-      animation: drift 20s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes drift {
-      0% { transform: translate(0,0) rotate(0deg); }
-      50% { transform: translate(20px, 30px) rotate(2deg); }
-      100% { transform: translate(0,0) rotate(0deg); }
-    }
-  </style>
+        /* Optional subtle background effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/bg.avif') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hunt Escape</h1>
-  <p>Enter the dark world of Hunt Escape, where survival is your only goal. Can you escape the hunt?</p>
-  <a class="play-store" href="https://play.google.com/store/apps/details?id=org.qtproject.example.HuntEscape&pcampaignid=web_share" target="_blank">Play on Google Play</a>
+    <h1>Hunt Escape</h1>
+    <p>Enter the dark world of Hunt Escape, where survival is your only goal. Can you escape the hunt?</p>
+    <a class="play-store" href="https://play.google.com/store/apps/details?id=org.qtproject.example.HuntEscape&pcampaignid=web_share" target="_blank">Play on Google Play</a>
 </body>
 </html>
